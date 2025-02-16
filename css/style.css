@@ -1,0 +1,256 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary-color: #4891ff;
+    --light-color: #f4f4f6;
+    --dark-color: #111;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: var(--light-color);
+    font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Topbar */
+.topbar-flex {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.hamburger-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger-button .hamburger-line {
+    width: 15px;
+    height: 4px;
+    border-bottom: 3px solid #fff;
+    margin-bottom: 1px;
+}
+
+/* Main menu */
+.navbar {
+    margin-top: 45px;
+    width: 300px;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1000;
+}
+
+.navbar .user-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border-bottom: 1px solid var(--light-color);
+    padding: 25px 20px;
+}
+
+.navbar .user-section img {
+    clip-path: circle(50%);
+    object-fit: cover;
+    height: 46px;
+}
+
+.navbar .user-section .user-control h2 {
+    margin: 0 0 5px 0;
+}
+
+.navbar .user-section .user-control ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.navbar .user-section .user-control ul li {
+    padding: 10px;
+}
+
+.navbar .user-section .user-control ul li:hover {
+    background: #ccc;
+
+}
+
+.navbar .dashboard h2 {
+    padding: 15px 15px 10px 25px;
+    font-weight: 400;
+
+    margin: 10px 0 0 0;
+}
+
+.navbar .dashboard ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar .dashboard ul li a {
+    padding: 10px 20px;
+    width: 100%;
+    color: #000;
+}
+
+.navbar .dashboard ul li a.active {
+    padding: 10px 20px;
+    width: 100%;
+    background: #2196F3;
+    color: #fff;
+}
+
+.navbar .dashboard ul li a:hover {
+    background: #ccc;
+}
+
+.navbar .dashboard ul li i {
+    margin-right: 10px;
+}
+
+/* Main */
+
+main {
+    margin-left: 300px;
+    transition: margin 0.5s;
+}
+
+main .jumbotron-flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+main .jumbotron-flex .jumbotron-card {
+    flex-basis: 20px;
+    background: lightgreen;
+    padding: 50px;
+}
+
+
+/* Utility Classes*/
+
+/* Containers */
+.container-fluid {
+    padding: 12px;
+}
+
+.container {
+    max-width: 900px;
+    padding: 12px;
+}
+
+.container-sm {
+    max-width: 700px;
+    padding: 12px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 7px 10px;
+    font-weight: normal;
+    cursor: pointer;
+    border: hidden;
+}
+
+.btn-block {
+    display: inline-block;
+}
+
+/* Colors */
+.bg-black {
+    background: #000;
+    color: #fff;
+}
+
+.bg-dark {
+    background: var(--dark-color);
+    color: #000;
+}
+
+.bg-light {
+    background: var(--light-color);
+    color: #000;
+}
+
+/* Text Classes */
+
+.text-xxl {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 40px 0 20px;
+}
+
+.text-xl {
+    font-size: 2.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 40px 0 20px;
+}
+
+.text-lg {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 30px 0 20px;
+}
+
+.text-md {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 20px 0 10px;
+}
+
+.text-sm {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 10px 0 5px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+
+/* Media Queries */
+@media (max-width: 1000px) {
+    .hamburger-button {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+
+
+}
