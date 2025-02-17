@@ -30,6 +30,11 @@ img {
 }
 
 /* Topbar */
+.topbar{position:fixed;
+    top:0px;
+    z-index: 1001;
+    width: 100%;
+}
 .topbar-flex {
     display: flex;
     flex-direction: row-reverse;
@@ -52,7 +57,7 @@ img {
 
 /* Main menu */
 .navbar {
-    margin-top: 45px;
+    padding-top: 45px;
     width: 300px;
     background: #fff;
     position: fixed;
@@ -130,23 +135,147 @@ img {
 }
 
 /* Main */
-
 main {
     margin-left: 300px;
     transition: margin 0.5s;
 }
 
-main .jumbotron-flex {
+main h1{
+    font-size: 17px;
+    margin-top: 40px;
+}
+
+main h1 i{
+    margin-right: 5px;
+}
+
+/* Jumbotrons */
+
+.jumbotrons .jumbotron-flex {
     display: flex;
     justify-content: space-around;
+    gap: 12px;
 }
 
-main .jumbotron-flex .jumbotron-card {
-    flex-basis: 20px;
-    background: lightgreen;
-    padding: 50px;
+.jumbotrons .jumbotron-flex .jumbotron-card {
+    flex-basis: 25%;
+    padding: 16px;
+    color: white;
 }
 
+.jumbotrons .jumbotron-flex .jumbotron-card p:first-child {
+    font-size: 48px;
+    margin-bottom: 15px;
+    display:flex;
+}
+.jumbotrons .jumbotron-flex .jumbotron-card p span{
+    margin-left: auto;
+    padding-left:10px;
+    font-size: 24px;
+}
+.jumbotrons .jumbotron-flex .jumbotron-card p:last-child {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.jumbotrons .jumbotron-flex .jumbotron-card.messages {
+    background: #f44336;
+    
+}
+.jumbotrons .jumbotron-flex .jumbotron-card.views {
+    background: #2196F3;
+    
+}
+.jumbotrons .jumbotron-flex .jumbotron-card.shares {
+    background: #009688;
+    
+}
+.jumbotrons .jumbotron-flex .jumbotron-card.users {
+    background: #ff9800;
+    
+}
+
+/* Maplog */
+.maplog .maplog-grid{
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 12px;
+}
+
+.maplog .maplog-grid .maplog-card table{
+    width: 100%;
+    border:none;
+    border-collapse: collapse;
+}
+
+.maplog .maplog-grid .maplog-card table tr{
+   height: 39px;
+}
+
+.maplog .maplog-grid .maplog-card table td{
+    padding-left: 12px;
+ }
+.maplog .maplog-grid .maplog-card table tr:nth-child(odd){
+    background: #fff;
+}
+
+/* General Stats */
+.general-stats ul li .graph-flex {
+    text-align: center;
+    line-height: 39px;
+    display:flex;
+    background: #ccc;
+}
+
+.general-stats ul li .graph-flex .filled {
+    height:39px;
+
+}
+
+.general-stats ul li .graph-flex .empty {
+    height:39px;
+    flex-basis: auto;
+}
+
+/* Countries */
+
+.countries table{
+    width: 100%;
+    border-collapse: collapse;
+    border:1px solid #ccc;
+}
+
+.countries table tr{
+   height: 39px;
+}
+
+.countries table tr:nth-child(odd){
+    background: #fff;
+}
+
+.countries table tr:hover{
+    background:#ccc;
+ }
+
+.countries table td{
+    padding-left: 12px;
+ }
+
+ .countries a.btn{
+    background: #616161;
+    padding: 10px 19px;
+ }
+
+ /* Recent Users */
+.recent-users .users-list{
+    background: #fff;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2), 0px 6px 20px rgba(0,0,0,0.1);
+}
+
+.recent-users .users-list .users-item{
+    padding: 25px;
+    border-bottom: 1px solid #ccc;
+}
 
 /* Utility Classes*/
 
@@ -175,7 +304,7 @@ main .jumbotron-flex .jumbotron-card {
 }
 
 .btn-block {
-    display: inline-block;
+    display: block;
 }
 
 /* Colors */
@@ -200,42 +329,75 @@ main .jumbotron-flex .jumbotron-card {
     font-size: 3rem;
     line-height: 1.2;
     font-weight: 600;
-    margin: 40px 0 20px;
 }
 
 .text-xl {
     font-size: 2.2rem;
     line-height: 1.4;
     font-weight: normal;
-    margin: 40px 0 20px;
 }
 
 .text-lg {
     font-size: 1.8rem;
     line-height: 1.4;
     font-weight: normal;
-    margin: 30px 0 20px;
 }
 
 .text-md {
     font-size: 1.2rem;
     line-height: 1.4;
     font-weight: normal;
-    margin: 20px 0 10px;
 }
 
 .text-sm {
     font-size: 0.9rem;
     line-height: 1.4;
     font-weight: normal;
-    margin: 10px 0 5px;
 }
 
 .text-center {
     text-align: center;
 }
 
+/* not in use
+.text-white {
+    color: #fff;
+}
+.text-black {
+    color: #000;
+}
 
+.bg-white{
+    background: #fff;
+}
+.bg-black {
+    color: #000;
+}
+*/
+
+/* Margins and Paddings */
+.pl-15{padding-left:15px;}
+.pt-45{padding-top:45px;}
+
+.mb-15{margin-bottom: 15px;}
+.mt-15{margin-top: 15px;}
+
+.mb-20{margin-bottom: 20px;}
+.mt-20{margin-top: 20px;}
+
+
+/* bar-colors */
+.bar-green {
+    background: #4CAF50;
+}
+
+.bar-orange {
+    background: #ff9800;
+}
+
+.bar-red {
+    background: #f44336;
+}
 
 /* Media Queries */
 @media (max-width: 1000px) {
@@ -251,6 +413,16 @@ main .jumbotron-flex .jumbotron-card {
         margin-left: 0;
     }
 
+}
 
+@media (max-width: 600px){
+    main .jumbotrons .jumbotron-flex {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
 
+    .maplog .maplog-grid{
+        grid-template-columns: 1fr; 
+    }
 }
