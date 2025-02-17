@@ -266,6 +266,11 @@ main h1 i{
     padding: 10px 19px;
  }
 
+ .countries a.btn:hover{
+    background:#ccc;
+    color: #000;
+ }
+
  /* Recent Users */
 .recent-users .users-list{
     background: #fff;
