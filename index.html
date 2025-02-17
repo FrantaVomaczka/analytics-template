@@ -12,7 +12,7 @@
 <body>
     
 <!-- Top bar -->
-<header class="bg-black">
+<header class="topbar bg-black">
     <div class="container-fluid">
         <div class="topbar-flex">
             <a href="#">Logo</a>
@@ -79,15 +79,182 @@
 </nav>
 
 <main>
+    <h1 class="pl-15 pt-45"><i class="fa-solid fa-gauge-high"></i>My Dashboard</h1>
+    <!-- Jumbotrons (cards) using flexbox -->
+    <section class="jumbotrons">
+        <div class="container-fluid">
+            <div class="jumbotron-flex">
+                <div class="jumbotron-card messages">
+                    <p>
+                        <i class="fa-solid fa-comment"></i><span>52</span>
+                    </p>
+                    <p>Messages</p>
+                </div>
+                <div class="jumbotron-card views">
+                    <p>
+                        <i class="fa-regular fa-eye"></i><span>99</span>
+                    </p>
+                    <p>Views</p>
+                </div>
+                <div class="jumbotron-card shares">
+                    <p>
+                        <i class="fa-solid fa-share-nodes"></i><span>23</span>
+                    </p>
+                    <p>Shares</p>
+                </div>
+                <div class="jumbotron-card users">
+                    <p>
+                        <i class="fa-solid fa-users"></i></i><span>50</span>
+                    </p>
+                    <p>Users</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Jumbotrons (cards) -->
-    <section>
-        <h2>My Dashboard</h2>
-        <div class="jumbotron-flex">
-            <div class="jumbotron-card">52</div>
-            <div class="jumbotron-card">99</div>
-            <div class="jumbotron-card">23</div>
-            <div class="jumbotron-card">50</div>
+<!-- Maplog (cards) using grid -->
+    <section class="maplog">
+        <div class="container-fluid">
+            <div class="maplog-grid">
+                <div class="maplog-card">
+                    <h2 class="text-md mb-15">Regions</h2>
+                    <img src="images/region.jpg" alt="map">
+                </div>
+                <div class="maplog-card">
+                    <h2 class="text-md mb-15">Feeds</h2>
+                    <table>
+                        <!--<caption>The latest events going on here</caption>-->
+                        <thead>
+                            <tr style="display:none;">
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><i class="fa-solid fa-user"></i></td>
+                                <td>New record, over 90 views.</td>
+                                <td>10 mins</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-solid fa-bell"></i></td>
+                                <td>Database error.</td>
+                                <td>15 mins</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-solid fa-users"></i></td>
+                                <td>New record, over 40 users.</td>
+                                <td>17 mins</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-solid fa-comment"></i></td>
+                                <td>New comments.</td>
+                                <td>25 mins</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-solid fa-bookmark"></i></td>
+                                <td>Check transactions.</td>
+                                <td>28 mins</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-solid fa-laptop"></i></td>
+                                <td>CPU overload.</td>
+                                <td>35 mins</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-solid fa-share-nodes"></i></td>
+                                <td>New shares.</td>
+                                <td>39 mins</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- General Stats -->
+    <section class="general-stats">
+        <div class="container-fluid">
+            <h2 class="text-md mb-15">General Stats</h2>
+            <ul>
+                <li>
+                    <h3 class="text-sm mt-15 mb-15">New Visitors</h3>
+                    <div class="graph-flex">
+                        <div class="filled bar-green" style="flex-basis:25%;"><p>25%</p></div>
+                        <div class="empty"></div>
+                    </div>
+                </li>
+                <li>
+                    <h3 class="text-sm mt-15 mb-15">New Users</h3>
+                    <div class="graph-flex">
+                        <div class="filled bar-orange" style="flex-basis:50%;"><p>50%</p></div>
+                        <div class="empty"></div>
+                    </div>
+                </li>
+                <li>
+                    <h3 class="text-sm mt-15 mb-15">Bounce Rate</h3>
+                    <div class="graph-flex">
+                        <div class="filled bar-red" style="flex-basis:75%;"><p>75%</p></div>
+                        <div class="empty"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="countries">
+        <div class="container-fluid">
+            <h2 class="text-md mb-15">Countries</h2>
+            <table class="mb-20">
+                <!--<caption>The latest events going on here</caption>-->
+                <thead>
+                    <tr style="display:none;">
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>United States</td>
+                        <td>65%</td>
+                    </tr>
+                    <tr>
+                        <td>UK</td>
+                        <td>15.7%</td>
+                    </tr>
+                    <tr>
+                        <td>Russia</td>
+                        <td>5.6%</td>
+                    </tr>
+                    <tr>
+                        <td>Spain</td>
+                        <td>2.1%</td>
+                    </tr>
+                    <tr>
+                        <td>India</td>
+                        <td>1.9%</td>
+                    </tr>
+                    <tr>
+                        <td>France</td>
+                        <td>1.5%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#" class="btn">More Countries <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- Recent Users -->
+    <section class="recent-users">
+        <div class="container-fluid">
+            <h2 class="text-md mb-15">Recent Users</h2>
+            <ul class="users-list">
+                <li class="users-item">Mike</li>
+                <li class="users-item">Jill</li>
+                <li class="users-item">Jane</li>
+            </ul>
         </div>
     </section>
 
